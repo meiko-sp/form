@@ -62,7 +62,9 @@ if st.button("送信"):
             server = smtplib.SMTP("smtp.gmail.com", 587)  # SMTPサーバーを適切なものに変更
             server.starttls()
             server.login(sender_email, sender_password)
-            server.sendmail(sender_email, email, msg.as_string())
+
+            recipients = [email, "koumu08@meiko-sp.com"]
+            server.sendmail(sender_email, recipients, msg.as_string())
             server.quit()
 
             st.success("メールを送信しました！")
