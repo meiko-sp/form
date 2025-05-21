@@ -37,11 +37,13 @@ st.write("""
 
 email = st.text_input("koumu2377@gmail.comからメールが届くだけです。")
 
+pass_word = st.text_input("パスワードを入力してください。")
+
 if st.button("送信"):
     if email:
         try:
             sender_email = "koumu2377@gmail.com"  # 送信元のメールアドレス
-            sender_password = "xjce igma ruiy abpj"       # 送信元メールアドレスのパスワード
+            sender_password = pass_word       # 送信元メールアドレスのパスワード
             subject = "招待メール"
             body = f"""{email} さん
             
