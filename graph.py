@@ -39,6 +39,7 @@ email = st.text_input("koumu2377@gmail.comからメールが届くだけです�
 
 pass_word = st.text_input("パスワードを入力してください。")
 
+
 if st.button("送信"):
     if email:
         try:
